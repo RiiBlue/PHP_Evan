@@ -1,0 +1,87 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.content-wrapper {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+}
+
+video {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer les éléments sur les petits écrans */
+    margin-top: 3%;
+}
+
+img {
+    width: 100%; /* Ajuster la largeur de l'image pour remplir la largeur du conteneur */
+    max-width: 400px; /* Limiter la largeur maximale de l'image */
+    height: auto; /* Maintenir le rapport hauteur/largeur */
+    margin-bottom: 20px; /* Ajouter de l'espace en bas de l'image */
+}
+
+.film-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer le contenu sur les petits écrans */
+    text-align: center; /* Centrer le texte sur les petits écrans */
+    margin-left: 0; /* Réinitialiser la marge pour centrer */
+}
+
+.film-info, .film-casting {
+    margin: 0 auto; /* Centrer horizontalement */
+    margin-bottom: 20px; /* Ajouter de l'espace en bas */
+}
+
+.synopsis {
+    font-size: 20px;
+    text-align: justify; /* Justifier le texte du synopsis */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transition: all ease 0.5s;
+}
+
+/* Media Queries pour rendre le contenu responsive */
+@media (max-width: 768px) {
+    video {
+        width: 100%; /* Ajuster la largeur de la vidéo pour remplir la largeur du conteneur */
+    }
+
+    .image {
+        flex-direction: column; /* Afficher les éléments en colonne sur les petits écrans */
+        align-items: center; /* Centrer les éléments en colonne */
+    }
+
+    .film-details {
+        margin-left: 0; /* Réinitialiser la marge pour centrer */
+    }
+}

@@ -1,0 +1,87 @@
+/* Styles pour la section de recherche de films */
+.film-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Assure un espacement uniforme entre tous les éléments */
+    padding: 20px;
+}
+
+.film {
+    flex-basis: calc(30% - 40px); /* Réduire légèrement la largeur pour compenser la marge */
+    margin: 10px; /* Ajouter une marge de 10px autour de chaque élément pour plus d'espacement */
+    margin-bottom: 30px; /* Augmenter la marge en bas pour plus d'espacement vertical */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: #444;
+}
+
+.film img {
+    width: 100%;
+    height: auto; /* Maintient le ratio d'aspect */
+    object-fit: cover;
+}
+
+.film:hover {
+    transform: scale(1.1);
+}
+
+.film div {
+    padding: 20px;
+}
+
+.film h2, .film p, .film a {
+    color: white;
+    margin: 0;
+}
+
+.film h2 {
+    font-size: 1.2em; /* Utilisation d'unités relatives pour le texte */
+    padding: 10px 0;
+}
+
+.film p {
+    font-size: 1em; /* Utilisation d'unités relatives pour le texte */
+    padding: 10px 0;
+}
+
+.film a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em; /* Utilisation d'unités relatives pour le texte du lien */
+}
+
+.film a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries pour rendre le contenu responsive */
+@media (max-width: 1024px) {
+    .film {
+        flex-basis: calc(45% - 40px); /* Ajustement pour tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    .film {
+        flex-basis: calc(100% - 40px); /* Ajustement pour petits écrans */
+    }
+    
+    .film h2 {
+        font-size: 1em; /* Réduction de la taille du texte sur petits écrans */
+    }
+    
+    .film p {
+        font-size: 0.9em; /* Réduction de la taille du texte sur petits écrans */
+    }
+    
+    .film a {
+        font-size: 0.9em; /* Réduction de la taille du texte du lien sur petits écrans */
+    }
+    
+    .texte {
+        font-size: 1.2em; /* Réduction de la taille du texte sur petits écrans */
+    }
+}

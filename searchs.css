@@ -1,0 +1,134 @@
+/* Style pour la section de recherche de films */
+.film-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Assure un espacement uniforme entre tous les éléments */
+    padding: 20px;
+}
+
+.film {
+    flex-basis: calc(30% - 40px); /* Réduire légèrement la largeur pour compenser la marge */
+    margin: 10px; /* Ajouter une marge de 10px autour de chaque élément pour plus d'espacement */
+    margin-bottom: 30px; /* Augmenter la marge en bas pour plus d'espacement vertical */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: #444;
+}
+
+.film img {
+    width: 100%;
+    height: auto; /* Maintient le ratio d'aspect */
+    object-fit: cover;
+}
+
+.film:hover {
+    transform: scale(1.1);
+}
+
+.film div {
+    padding: 20px;
+}
+
+.film h2, .film p, .film a {
+    color: white;
+    margin: 0;
+}
+
+.film h2 {
+    font-size: 1.2em; /* Utilisation d'unités relatives pour le texte */
+    padding: 10px 0;
+}
+
+.film p {
+    font-size: 1em; /* Utilisation d'unités relatives pour le texte */
+    padding: 10px 0;
+}
+
+.film a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em; /* Utilisation d'unités relatives pour le texte du lien */
+}
+
+.film a:hover {
+    text-decoration: underline;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    max-width: 700px; /* Largeur max pour les grands écrans */
+    box-sizing: border-box; /* Assure que padding et border sont inclus dans la largeur totale */
+}
+
+h1, h2 {
+    color: white;
+    text-align: center;
+    font-size: 1.5em; /* Utilisation d'unités relatives pour le texte */
+}
+
+form {
+    text-align: center;
+    margin: 20px 0; /* Ajouter une marge au formulaire pour l'espacement */
+}
+
+button {
+    height: 30px;
+    width: auto;
+}
+
+.texte {
+    margin-top: 30px;
+    font-size: 1.5em; /* Utilisation d'unités relatives pour le texte */
+    color: white;
+}
+
+/* Media Queries pour rendre le contenu responsive */
+@media (max-width: 1024px) {
+    .film {
+        flex-basis: calc(45% - 40px); /* Ajustement pour tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    .film {
+        flex-basis: calc(100% - 40px); /* Ajustement pour petits écrans */
+    }
+    
+    .film h2 {
+        font-size: 1em; /* Réduction de la taille du texte sur petits écrans */
+    }
+    
+    .film p {
+        font-size: 0.9em; /* Réduction de la taille du texte sur petits écrans */
+    }
+    
+    .film a {
+        font-size: 0.9em; /* Réduction de la taille du texte du lien sur petits écrans */
+    }
+    
+    .texte {
+        font-size: 1.2em; /* Réduction de la taille du texte sur petits écrans */
+    }
+}
+
+@media (max-width: 600px) {
+    input {
+        width: 100%; /* Largeur totale pour les petits écrans */
+    }
+    
+    .film div {
+        padding: 10px; /* Réduction du padding pour les petits écrans */
+    }
+    
+    h1 {
+        font-size: 1.2em; /* Réduction de la taille du texte sur les petits écrans */
+    }
+    
+    h2 {
+        font-size: 1em; /* Réduction de la taille du texte sur les petits écrans */
+    }
+}

@@ -1,0 +1,36 @@
+.movie {
+    display: flex;
+    align-items: center; /* Pour aligner le texte au centre verticalement */
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.image {
+    width: 150px; /* Largeur de l'image réduite */
+    height: auto;
+    object-fit: cover;
+    margin-right: 30px; /* Espacement entre l'image et le texte */
+}
+
+.title, .price, .producer {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
