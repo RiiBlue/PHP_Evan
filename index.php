@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navebar.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
@@ -35,7 +35,7 @@
     require_once "C:\wamp64\config\config.php";
     
     try {
-        $pdo = new PDO("mysql:host=" . 'localhost' . ";dbname=" . 'ProjetEvanPHP', 'root', '');
+        $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_DATABASE, DB_USERNAME, DB_PASSWORD);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $pdo->query("SELECT id, picture, title, price FROM movie LIMIT 20");

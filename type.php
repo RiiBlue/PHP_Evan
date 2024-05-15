@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navebar.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
@@ -58,11 +58,15 @@
                         <p class="title"><?php echo $title; ?></p>
                         <p class="title"><?php echo $price;?>€</p>
                     </a>
-                    <?php if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {?>
-                    <a class="button"<?php echo $movie_id; ?>>Veillez vous Connectez</a>
-                    <?php }else {?>
-                    <a class="button" href="cart.php?action=add&id=<?php echo $movie_id; ?>">Ajouter au panier</a> <?php
-                    } ?>
+                    <?php if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) { ?>
+                        <a class="button" href="login.php">Veuillez vous connecter</a>
+                    <?php } else { ?>
+                        <form action="cart.php" method="post">
+                            <input type="hidden" name="action" value="add">
+                            <input type="hidden" name="id" value="<?php echo $movie_id; ?>">
+                            <button type="submit" class="button">Ajouter au panier</button>
+                        </form>
+                    <?php } ?>
                 </div>
 
                 <?php

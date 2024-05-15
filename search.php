@@ -1,10 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navebar.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="searchs.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
@@ -14,7 +18,6 @@
         <li><a class="href" href="index.php"><i class="fa-solid fa-house-chimney-window" style="color: #ffffff;"></i>&ensp;Accueil</a></li>
         <li><a class="href" href="search.php"><i class="fa-solid fa-magnifying-glass-arrow-right" style="color: #ffffff;"></i>&ensp;Rechercher</a></li>
         <?php
-        session_start();
         if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {?>
             <li><a class="href" href="login.php" id="redirectssobutton"><i class="fa-solid fa-right-to-bracket"></i>S'identifier</a></li>
             <?php
@@ -68,6 +71,14 @@ try {
             <div>
                 <h2><?php echo $film['title']; ?></h2>
                 <p>Prix : <?php echo $film['price']; ?>€</p>
+                <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
+                    <form action="cart.php" method="post">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="id" value="<?php echo $film['id']; ?>">
+                        <button type="submit" class="button">Ajouter au panier</button>
+                    </form>
+                <?php
+            endif; ?>
             </div>
         </a>
     <?php endforeach; ?>

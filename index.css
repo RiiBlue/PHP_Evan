@@ -1,12 +1,12 @@
-/* Styles pour la section de recherche de films */
-.film-container {
+/* Styles pour la section de recherche de movies */
+.movie-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Assure un espacement uniforme entre tous les éléments */
     padding: 20px;
 }
 
-.film {
+.movie {
     flex-basis: calc(30% - 40px); /* Réduire légèrement la largeur pour compenser la marge */
     margin: 10px; /* Ajouter une marge de 10px autour de chaque élément pour plus d'espacement */
     margin-bottom: 30px; /* Augmenter la marge en bas pour plus d'espacement vertical */
@@ -18,66 +18,66 @@
     background-color: #444;
 }
 
-.film img {
+.movie img {
     width: 100%;
     height: auto; /* Maintient le ratio d'aspect */
     object-fit: cover;
 }
 
-.film:hover {
+.movie:hover {
     transform: scale(1.1);
 }
 
-.film div {
+.movie div {
     padding: 20px;
 }
 
-.film h2, .film p, .film a {
+.movie h2, .movie p, .movie a {
     color: white;
     margin: 0;
 }
 
-.film h2 {
+.movie h2 {
     font-size: 1.2em; /* Utilisation d'unités relatives pour le texte */
     padding: 10px 0;
 }
 
-.film p {
+.movie p {
     font-size: 1em; /* Utilisation d'unités relatives pour le texte */
     padding: 10px 0;
 }
 
-.film a {
+.movie a {
     text-decoration: none;
     color: #007bff;
     font-size: 1em; /* Utilisation d'unités relatives pour le texte du lien */
 }
 
-.film a:hover {
+.movie a:hover {
     text-decoration: underline;
 }
 
 /* Media Queries pour rendre le contenu responsive */
 @media (max-width: 1024px) {
-    .film {
+    .movie {
         flex-basis: calc(45% - 40px); /* Ajustement pour tablettes */
     }
 }
 
 @media (max-width: 768px) {
-    .film {
+    .movie {
         flex-basis: calc(100% - 40px); /* Ajustement pour petits écrans */
     }
     
-    .film h2 {
+    .movie h2 {
         font-size: 1em; /* Réduction de la taille du texte sur petits écrans */
     }
     
-    .film p {
+    .movie p {
         font-size: 0.9em; /* Réduction de la taille du texte sur petits écrans */
     }
     
-    .film a {
+    .movie a {
         font-size: 0.9em; /* Réduction de la taille du texte du lien sur petits écrans */
     }
     
