@@ -8,20 +8,10 @@
     <link rel="stylesheet" href="logins.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
-<header>
-<nav>
-    <ul class="onglet-liens">
-        <li><a class="href" href="index.php"><i class="fa-solid fa-house fa-xs" style="color: #ffffff;"></i>&ensp;Accueil</a></li>
-        <li><a class="href" href="search.php"><i class="fa-solid fa-magnifying-glass fa-xs" style="color: #ffffff;"></i>&ensp;Rechercher</a></li>
-        <li><a class="href" href="login.php" id="redirectssobutton">S'identifier</a></li>
-        <li class="href" id="logoutbutton" style="display: none;">Déconnexion</li>
-        <li class="href" id="monCompteText" style="display: none;position: absolute;right: 0;"><i class="fa-solid fa-circle-user" style="color: #ffffff;">Mon Compte</i></li>
-        <li><a class="href" href="type.php?type=action" style="color: #ffffff">Action</a></li>
-        <li><a class="href" href="type.php?type=drame" style="color: #ffffff">Drame</a></li>
-    </ul>
-</nav>
-</header>
 <body>
+<header>
+    <?php include'header.php' ?>
+</header>
 <form action="login.php" method="post">
     <h3>Login Here</h3>
 
@@ -37,7 +27,6 @@
     </div>
 </form>
 <?php
-session_start();
 
 if(isset($_COOKIE['user_email']) && isset($_COOKIE['user_firstname'])) {
     $_SESSION['user_email'] = $_COOKIE['user_email'];
