@@ -94,8 +94,6 @@ if(isset($_COOKIE["user_firstname"])) {
     header("Location: index.php");
     exit;
     }?>
-?>
-<?php include'footer.php' ?>
 </body>
 </html>
 
