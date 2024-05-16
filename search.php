@@ -55,8 +55,9 @@ try {
                         <input type="hidden" name="id" value="<?php echo $film['id']; ?>">
                         <button type="submit" class="button">Ajouter au panier</button>
                     </form>
-                <?php
-            endif; ?>
+                <?php else: ?>
+                    <a class="button" href="login.php">Veuillez vous connecter</a>
+                <?php endif; ?>
             </div>
         </a>
     <?php endforeach; ?>

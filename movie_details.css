@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #ffffff;
-    padding: 20px;
 }
 
 .content-wrapper {
@@ -26,8 +25,9 @@ video {
 .image {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrer les éléments sur les petits écrans */
+    justify-content: flex-start; /* Aligner les éléments à gauche */
     margin-top: 3%;
+    margin-left: 10%;
 }
 
 img {
@@ -42,12 +42,18 @@ img {
     flex-direction: column;
     align-items: center; /* Centrer le contenu sur les petits écrans */
     text-align: center; /* Centrer le texte sur les petits écrans */
-    margin-left: 0; /* Réinitialiser la marge pour centrer */
+    margin-left: 10%; /* Réinitialiser la marge pour centrer */
+    text-decoration: none;
+    color: white;
+    margin-top: 5%;
 }
 
 .film-info, .film-casting {
     margin: 0 auto; /* Centrer horizontalement */
-    margin-bottom: 20px; /* Ajouter de l'espace en bas */
+    margin-bottom: 15%; /* Ajouter de l'espace en bas */
+    text-decoration: none;
+    color: white;
+    line-height: 120%;
 }
 
 .synopsis {
@@ -55,23 +61,30 @@ img {
     text-align: justify; /* Justifier le texte du synopsis */
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+button, a.button, .film-casting a {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
 }
 
-button:hover {
-    background-color: #0056b3;
+button:hover, a.button:hover, .film-casting a:hover {
+    background-color: white;
+    color: #007bff;
     transition: all ease 0.5s;
 }
 
+.film-casting a {
+    text-decoration: none;
+    color: white;
+}
+
+
 /* Media Queries pour rendre le contenu responsive */
-@media (max-width: 768px) {
+@media (max-width: 870px) {
     video {
         width: 100%; /* Ajuster la largeur de la vidéo pour remplir la largeur du conteneur */
     }

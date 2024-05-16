@@ -15,7 +15,8 @@
     position: relative;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    background-color: #444;
+    background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+    text-decoration: none;
 }
 
 .movie img {
@@ -55,6 +56,22 @@
 
 .movie a:hover {
     text-decoration: underline;
+    text-decoration: none;
+}
+
+button, a.button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+button:hover, a.button:hover{
+    background-color: white;
+    color: blueviolet;
+    transition: all ease 0.5s;
 }
 
 /* Media Queries pour rendre le contenu responsive */

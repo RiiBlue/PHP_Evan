@@ -131,7 +131,7 @@ button {
 }
 
 /* Ajoutez les styles pour les écrans de petite taille */
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 840px) {
     .background {
         width: 90%;
         height: auto;
@@ -152,10 +152,10 @@ button {
     form {
         width: 90%;
         max-width: 400px;
-        position: static;
-        transform: none;
-        top: auto;
-        left: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -30%);
         padding: 30px 20px;
     }
     
@@ -169,3 +169,4 @@ button {
         margin-top: 30px;
     }
 }
+

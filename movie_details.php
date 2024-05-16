@@ -31,8 +31,18 @@
                 echo '<video controls><source src="' . $film['video'] . '" type="video/mp4"></video>';
                 ?>
                 <div class="image" >
-                    <?php
-                    echo '<img src="' . $film['picture'] . '" alt="Image du film ' . $film['title'] . '">';?>
+                <?php
+                    // Votre code PHP pour récupérer les détails du film
+
+                    // En dehors des balises PHP, vous pouvez inclure du HTML en fermant temporairement les balises PHP
+                    if (isset($film['picture']) && isset($film['title'])) {
+                        $picture = $film['picture'];
+                        $title = $film['title'];
+                ?>
+                    <img src="<?php echo $picture; ?>" alt="Image du film <?php echo $title; ?>">
+                <?php
+                    }
+                ?>
                     <div class="film-details">
                         <div class="film-info">
                             <p><strong>Date de Sortie:</strong> <?php echo $film['date']; ?></>
@@ -56,7 +66,7 @@
                                 $stmt->execute([$film['producer_id']]);
                                 $producer_name = $stmt->fetch(PDO::FETCH_ASSOC);
                             ?>
-                            <?php echo '<p><strong>Producteur:</strong> <a href="producer_details.php?id=' . urlencode($film['producer_id']) . '">' . $producer_name['name'] . '</a></p>';?>
+                            <p><strong>Producteur:</strong> <a href="producer_details.php?id=<?php echo urlencode($film['producer_id']); ?>"><?php echo $producer_name['name']; ?></a></p>
                             <p><strong>Acteurs:</strong> <?php echo $film['actor']; ?></p>
                         </div>
                     </div>

@@ -65,12 +65,12 @@ nav ul li {
     nav {
         flex-direction: column;
         height: auto;
-        padding: 10px 0;
+        padding: 5px 0; /* Réduire le padding */
     }
 
     .href {
-        font-size: 1.2em;
-        padding: 10px 15px;
+        font-size: 1em; /* Réduire la taille de la police */
+        padding: 8px 12px; /* Réduire le padding */
     }
 
     .onglet-liens {
@@ -78,9 +78,10 @@ nav ul li {
     }
 
     .onglet-liens li {
-        margin: 5px 0;
+        margin: 3px 0; /* Réduire la marge */
     }
 }
+
 
 @media (max-width: 480px) {
     .href {
