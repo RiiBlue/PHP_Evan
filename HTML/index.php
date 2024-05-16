@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../CSS/navbar.css">
+    <link rel="stylesheet" href="./../CSS/index.css">
 </head>
 <body>
 <header>
@@ -63,5 +62,7 @@
     }
     ?>
 </div>
+<?php include 'footer.php'; ?>
+
 </body>
 </html>

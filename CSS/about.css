@@ -1,0 +1,35 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.texte {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+/* Media Queries pour les écrans de taille moyenne (tablette) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Media Queries pour les écrans de petite taille (téléphone) */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 90%;
+    }
+    .texte {
+        font-size: 1em;
+    }
+}

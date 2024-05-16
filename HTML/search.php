@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="searchs.css">
+    <link rel="stylesheet" href="./../CSS/navbar.css">
+    <link rel="stylesheet" href="./../CSS/searchs.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -55,8 +55,6 @@ try {
                         <input type="hidden" name="id" value="<?php echo $film['id']; ?>">
                         <button type="submit" class="button">Ajouter au panier</button>
                     </form>
-                <?php else: ?>
-                    <a class="button" href="login.php">Veuillez vous connecter</a>
                 <?php endif; ?>
             </div>
         </a>
@@ -65,6 +63,6 @@ try {
 <?php else: ?>
     <p>Aucun résultat trouvé.</p>
 <?php endif; ?>
-
+<?php include'footer.php' ?>
 </body>
 </html>

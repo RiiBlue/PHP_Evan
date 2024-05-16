@@ -130,6 +130,7 @@ button {
     margin-right: 4px;
 }
 
+
 /* Ajoutez les styles pour les écrans de petite taille */
 @media screen and (max-width: 840px) {
     .background {

@@ -157,6 +157,19 @@ form button:hover {
     background-color: #d32f2f;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+
 @media (max-width: 768px) {
     .movie {
         flex-direction: column;

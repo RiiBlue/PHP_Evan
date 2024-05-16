@@ -1,0 +1,18 @@
+.texte {
+    margin-top: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}

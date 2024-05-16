@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuegnietCiné</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="registers.css">
+    <link rel="stylesheet" href="./../CSS/navbar.css">
+    <link rel="stylesheet" href="./../CSS/registers.css">
     <script src="https://kit.fontawesome.com/f2f214af03.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <?php include'header.php' ?>
 </header>
 <form action="register.php" method="post">
-    <h3>register Here</h3>
+    <h3>Register Here</h3>
 
     <label for="name">Name</label>
     <input type="text" placeholder="Name..." name="name"  id="name">
@@ -90,7 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+if(isset($_COOKIE["user_firstname"])) {
+    header("Location: index.php");
+    exit;
+    }?>
 ?>
+<?php include'footer.php' ?>
 </body>
 </html>
 
