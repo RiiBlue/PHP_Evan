@@ -90,10 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-if(isset($_COOKIE["user_firstname"])) {
-    header("Location: index.php");
-    exit;
-    }?>
+?>
 </body>
 </html>
 
